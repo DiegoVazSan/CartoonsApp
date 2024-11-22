@@ -5,17 +5,11 @@ export const CartoonsApp = () => {
 
     const [categories, setCategories] = useState(['One Punch', 'DragonBall']);
 
-    const onAddCategory = () => {
-        setCategories([...categories, 'Nabruto']);
-    }
-
     return (
         <>
             <h1>Cartoons App</h1>
 
-            <AddCategory />
-
-            <button onClick={ onAddCategory }>Add</button>
+            <AddCategory addNewCategory={ setCategories } />
 
             <ol>
                 {
