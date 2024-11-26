@@ -4,7 +4,7 @@ import { GiftGrid } from "./components/GiftGrid";
 
 export const CartoonsApp = () => {
 
-    const [categories, setCategories] = useState(['One Punch', 'DragonBall']);
+    const [categories, setCategories] = useState(['DragonBall']);
 
     const addNewCategory = (newCategory) => {
         if (categories.includes(newCategory)) return;
@@ -21,15 +21,15 @@ export const CartoonsApp = () => {
             />
 
 
-                {
-                    categories.map(category => (
-                        <GiftGrid
-                            key={category}
+            {
+                   categories.map(category => (
+                    <GiftGrid
+                        key={category}
                             category={category}
-                        />
-                    ))
-                }
-                
+                    />
+                ))
+            }
+
         </>
     );
 }
